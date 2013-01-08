@@ -1,0 +1,48 @@
+<head>
+  <title>app.json</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <section>
+    <h1>app.json</h1>
+    {{> submitter}}
+    {{> apps}}
+    {{> submissions}}
+  </section>
+</body>
+
+<template name="apps">
+  <ul class="apps">
+    {{#each app}}
+      <li>
+        <a href="http://{{domain}}"><img src="http://{{domain}}{{media.icon_128}}"></a>
+        <h3><a href="http://{{domain}}">{{name}}</a></h3>
+        <p>
+            {{description}}
+            <br>
+            <a class="weak" href="http://{{domain}}/app.json">{{domain}}</a>
+        </p>
+      </ai>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="submissions">
+  <ul class="submissions">
+    {{#each submission}}
+      <li class="{{status}}">
+        {{domain}}
+      </li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="submitter">
+  <form class="submitter">
+    <input autofocus="autofocus" placeholder="your-app-domain.com"></input>
+  </form>
+</template>
+
+<template name="app">
+</template>

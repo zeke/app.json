@@ -1,0 +1,91 @@
+sidebar_width = 200px
+heading_color = #000
+
+fonty()
+  font-family 'PT Sans', "helvetica neue", helvetica, arial
+
+border-radius()
+  -webkit-border-radius arguments
+  -moz-border-radius arguments
+  border-radius arguments
+      
+reset_list()
+  list-style none
+  margin 0
+  padding 0
+
+body 
+  fonty()
+  padding 20px
+  font-size 16px
+  
+section
+  max-width 640px
+
+h1
+  margin 0
+  padding 10px 0 20px 0
+  font-size 32px
+  span.weak
+    font-weight normal
+    font-size 26px
+
+h2
+  font-size 24px
+
+h3  
+  font-size 18px
+  a
+    color heading_color
+    text-decoration none
+
+.weak
+  color #999
+
+form
+  position absolute
+  top 30px
+  right 20px
+  input
+    fonty()
+    font-size 14px
+    padding 5px
+    min-width sidebar_width
+
+ul.apps
+  reset_list()
+  > li
+    position relative
+    padding 10px 0
+    margin: 10px 0
+    h3
+      position absolute
+      left 150px
+      top 25px
+      margin 0
+      padding 0
+    p
+      position absolute
+      left 150px
+      top 35px
+      color #888
+
+ul.submissions
+  reset_list()
+  position absolute
+  top 80px
+  right 20px
+  width sidebar_width + 15px
+
+  li
+    display block
+    color white
+    background-color #CCC
+    padding 4px 6px
+    margin: 4px 0
+    border-radius 2px
+    font-size 12px
+    &.success
+      background-color green
+    &.error
+      background-color red
